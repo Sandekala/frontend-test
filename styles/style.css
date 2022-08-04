@@ -1,0 +1,305 @@
+:root {
+  --blue: #007bc2;
+  --darkBlue: #004a75;
+  --orange: #ff8000;
+  --darkOrange: #cc6600;
+  --smokeGrey: #e5e5e5;
+}
+* {
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+/* Notification Start */
+#notification {
+  width: 100%;
+  z-index: 3;
+}
+.container {
+  background-color: var(--smokeGrey);
+  position: relative;
+}
+
+.notification-panel {
+  width: 100%;
+  background-color: var(--smokeGrey);
+  color: #343636;
+  z-index: 3;
+}
+.notification-panel > div > p {
+  max-width: 80%;
+}
+
+a {
+  text-decoration: none;
+  color: darkblue;
+}
+a:hover {
+  text-decoration: underline;
+}
+.notification-panel > div {
+  margin: auto;
+  max-width: 700px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+.notification-panel > div > div:nth-child(1) {
+  max-width: 90%;
+  display: inline-block;
+}
+.notification-panel > div > div:nth-child(2) {
+  display: inline;
+}
+.notification-panel button {
+  width: 60px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 3px;
+  background-color: var(--blue);
+  color: #fff;
+  cursor: pointer;
+}
+.notification-panel button:hover {
+  transition: all 300ms ease-in-out;
+  background-color: var(--darkBlue);
+}
+/* Notification End */
+
+/* Hero Start */
+
+.hero {
+  background-image: radial-gradient(rgba(0, 100, 180, 0.5), rgba(0, 100, 180, 0.5)), url(../assets/work-desk__dustin-lee.jpg);
+  filter: contrast(200%) brightness(60%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+.logo {
+  margin-bottom: 40px;
+  position: absolute;
+  top: 0;
+}
+.logo > img {
+  width: 30px;
+  margin: 20px;
+}
+.hero h1 {
+  font-weight: 100;
+  font-size: 30px;
+}
+#hero > div:nth-child(3) {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  margin: auto;
+}
+#hero > div:nth-child(3) > div:nth-child(1) {
+  margin-bottom: 30px;
+}
+#hero > div:nth-child(3) > h2 {
+  margin: 10px 0;
+  font-size: larger;
+  font-weight: 800;
+}
+#hero > div:nth-child(3) span {
+  color: #fff;
+  cursor: pointer;
+  margin-top: 30px;
+  border: solid #fff;
+  padding: 10px 15px;
+  border-radius: 3px;
+}
+#hero > div:nth-child(3) span:hover {
+  transition: all 300ms ease-in-out;
+  background-color: #fff;
+  color: var(--blue);
+}
+/* Hero End */
+
+/* Highlight Start */
+.highlights {
+  padding: 50px 20px;
+  background-color: var(--smokeGrey);
+  text-align: center;
+  color: #343636;
+}
+.highlights-title {
+  max-width: 1225px;
+  margin: auto;
+}
+.highlights-panel {
+  max-width: 1225px;
+  margin: 50px auto;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+}
+.highlights-panel p {
+  font-size: 10px;
+}
+@media screen and (min-width: 704px) {
+  .highlights-panel {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+@media screen and (min-width: 960px) {
+  .highlights-panel {
+    max-width: 1225px;
+    justify-content: center;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
+  }
+}
+.tile {
+  position: relative;
+  padding: 15px;
+  text-align: left;
+  border: solid darkgrey 1px;
+  border-radius: 3px;
+  box-shadow: 1px 1px #fff inset, 1px 1px #fff;
+}
+.tile > div {
+  position: absolute;
+  right: 20px;
+  width: 30px;
+}
+.tile > h3 {
+  margin-bottom: 10px;
+}
+/* Highlight End */
+
+/* Footer Start */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100px;
+  color: #a6adc5;
+  background-color: #040325;
+}
+footer > div {
+  max-width: 1366px;
+}
+footer a {
+  color: #a6adc5;
+}
+/* Footer End */
+
+/* newsletter Start */
+.newsletter {
+  max-width: 600px;
+  height: auto;
+}
+.newsletter form {
+  margin-top: 20px;
+}
+.newsletter span {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  cursor: pointer;
+}
+.newsletter span:hover {
+  opacity: 0.8;
+}
+.newsletter input {
+  width: 78%;
+  padding: 5px 10px;
+  border: 0;
+  outline: 0;
+}
+.newsletter input:hover {
+  background-color: var(--smokeGrey);
+  transition: all 300ms ease;
+}
+.newsletter button {
+  cursor: pointer;
+  background-color: var(--orange);
+  border: 0;
+  border-radius: 3px;
+  color: #fff;
+  padding: 5px 10px;
+}
+.newsletter button:hover {
+  transition: all 300ms ease-in-out;
+  background-color: var(--darkOrange);
+  color: #fff;
+}
+.newsletter-notif {
+  width: auto;
+  padding: 20px;
+  height: auto;
+  position: fixed;
+  bottom: -400px;
+  color: #fff;
+  background-color: var(--blue);
+  opacity: 0.9;
+  transition: all 1s ease-in-out;
+  z-index: 10;
+}
+@media screen and (min-width: 640px) {
+  .newsletter-notif {
+    width: 600px;
+  }
+}
+
+/* newsletter End */
+
+/* miscellaneous */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #aaa;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #717171;
+}
+
+@media screen and (max-width: 630px) {
+  #notification {
+    height: 150px;
+  }
+  .newsletter input,
+  .newsletter button {
+    width: 100%;
+    text-indent: 10px;
+    padding: 5px 0;
+    margin-bottom: 10px;
+  }
+  #hero {
+    font-size: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  #notification {
+    height: 68px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #notification {
+    height: 68px;
+  }
+}
